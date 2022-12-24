@@ -1,0 +1,23 @@
+public class Main{
+    public static void main(String args[])
+    {
+        int a=96;
+        int b=56;
+        System.out.println(Gcd(a,b));
+        
+    }
+    static int Gcd(int n1,int n2)
+    {
+        if(n1==0)
+           return n2;
+        if(n2==0)
+            return n1;
+            
+        // base case
+        if(n1==n2)
+           return n1;
+        if(n1>n2)
+           return Gcd(n1-n2,n2);
+        return Gcd(n1,n2-n1);   
+    }
+}
