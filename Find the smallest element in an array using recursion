@@ -1,0 +1,17 @@
+class FindSm{
+    public static void main(String args[])
+    {
+        int arr[]={23,54,65,12,9,67};
+        int n=arr.length;
+        System.out.println(smallest(arr,n));
+        
+    }
+    static int smallest(int arr[],int n)
+    {
+        if(n==1)
+           return arr[0];
+        
+         
+            return Math.min(arr[n-1],smallest(arr,n-1));
+    }
+}
